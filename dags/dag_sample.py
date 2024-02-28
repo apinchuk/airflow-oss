@@ -17,10 +17,10 @@ with DAG(
         ) as dag: 
 
 
-t1 = BashOperator( 
-                task_id = 'create_task', 
-                bash_command = 'python pi.py'
-        ) 
+    t1 = BashOperator( 
+                    task_id = 'create_task', 
+                    bash_command = 'python pi.py'
+            ) 
 
 #start = DummyOperator(task_id='start', dag=dag) 
 end = DummyOperator(task_id='end', dag=dag) 
